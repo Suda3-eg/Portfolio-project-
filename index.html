@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة شخصية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            transition: transform 0.3s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 5px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            img {
+                max-width: 100px;
+            }
+            section {
+                padding: 15px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مرحبًا، أنا محمد</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">عنّي</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#contact">تواصل معي</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <img src="picture.jpg" alt="صورة شخصية">
+    <h1>عنّي</h1>
+    <p>مرحبًا! أنا محمد، مطور ويب مبتدئ. أحب البرمجة وتطوير المواقع والتعلم المستمر.</p>
+    
+    <button onclick="showMore()">عرض المزيد</button>
+    
+    <p id="moreInfo" style="display:none;">أحب أيضًا قراءة الكتب التقنية وتجربة التقنيات الحديثة.</p>
+    
+    <div class="social-icons">
+        <a href="https://www.facebook.com/mun3azil?mibextid=ZbWKwL">فيسبوك</a>
+        <a href="https://wa.me/201062828060?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7!%20%D8%B3%D8%B9%D9%8A%D8%AF%20%D8%A8%D9%84%D9%82%D8%A7%D8%A6%D9%83%20%D9%81%D9%8A%20%D8%B9%D8%A7%D9%84%D9%85%20%D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9%D8%8C%20%D8%AD%D9%8A%D8%AB%20%D8%A7%D9%84%D8%A3%D9%81%D9%83%D8%A7%D8%B1%20%D8%AA%D8%AA%D8%AD%D9%88%D9%84%20%D8%A5%D9%84%D9%89%20%D9%88%D8%A7%D9%82%D8%B9!">واتس اب</a>
+        <a href="https://www.tiktok.com/@mun3azil?_t=8pvhA5Ddn1O&_r=1">تيك توك</a>
+    </div>
+</section>
+
+<section id="skills">
+    <h1>المهارات</h1>
+    <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h1>تواصل معي</h1>
+    <form onsubmit="sendEmail(event)">
+        <label for="name">الاسم:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">رسالتك:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">إرسال</button>
+    </form>
+</section>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("wRas45YbfKboP4IT3"); // ضع هنا معرّف المستخدم الخاص بك من EmailJS
+   })();
+</script>
+
+<script>
+    function showMore() {
+        var moreInfo = document.getElementById("moreInfo");
+        if (moreInfo.style.display === "none") {
+            moreInfo.style.display = "block";
+        } else {
+            moreInfo.style.display = "none";
+        }
+    }
+
+    function sendEmail(e) {
+        e.preventDefault(); // لمنع إعادة تحميل الصفحة
+
+        emailjs.sendForm('service_khrho8w', 'template_00v0m9m', e.target)
+            .then(function() {
+                alert('تم إرسال الرسالة بنجاح!');
+            }, function(error) {
+                alert('فشل في إرسال الرسالة، حاول مرة أخرى.', error);
+            });
+    }
+</script>
+
+</body>
+</html>
